@@ -1,0 +1,26 @@
+{
+  "name": "nordic-company-registry",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "migrate:local": "wrangler d1 migrations apply db-nordic-company-registry --local",
+    "migrate:remote": "wrangler d1 migrations apply db-nordic-company-registry --remote"
+  },
+  "dependencies": {
+    "hono": "^4.6.0",
+    "zod": "^3.23.0",
+    "@hono/zod-openapi": "^0.18.0",
+    "@hono/swagger-ui": "^0.5.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "@cloudflare/vitest-pool-workers": "^0.5.0",
+    "wrangler": "^3.95.0"
+  }
+}

@@ -1,0 +1,19 @@
+name = "nordic-company-registry"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "db-nordic-company-registry"
+database_id = "dc7bbcfe-6df8-4ebf-8a7e-76f99ef2ac6e"
+
+[triggers]
+crons = ["0 3 * * *"]
+
+[observability]
+enabled = true
+
+[vars]
+PRODUCT_SLUG = "nordic-company-registry"
+SOURCE_URL = "https://www.brreg.no/en/use-of-data-from-the-bronnoysund-register-centre/datasets-and-api/data-on-nordic-businesses/"
